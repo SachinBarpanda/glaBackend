@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Async Await</h1>
+
+    <script>
+        
+        // let ourPromise = new Promise(function(resolve , reject){
+        //     setTimeout(()=>{
+        //         resolve("Image uploaded to edit");
+                
+        //     },2000)
+        // })
+
+        // ourPromise.then(
+        //     function(val){
+        //         console.log(val);
+        //         return new Promise(function(resolve , reject){
+        //         setTimeout(()=>{
+        //             resolve("Captions are added");
+        //         },2000)
+        //     })      
+        //     }
+        // )
+        // .then(function(val){
+        //     console.log(val);
+        // })
+
+        async function bhanu(){
+            await new Promise(function(resolve,reject){
+                setTimeout(()=>{
+                    console.log("Photo uploaded");
+                    resolve();
+                },2000)
+            })
+            await new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    console.log("Captions are added");
+                },2000)
+            })
+        }
+        bhanu();
+
+    </script>
+</body>
+</html>

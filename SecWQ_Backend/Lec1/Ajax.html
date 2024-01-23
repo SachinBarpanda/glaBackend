@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ajax</h1>
+
+    <script>
+        let obj = new XMLHttpRequest()
+        obj.open('GET',"https://isro.vercel.app/api/spacecrafts")
+        obj.send();
+        obj.onload = function(){
+            console.log(JSON.parse(this.response).spacecrafts[1].name);
+        }
+
+        obj.onerror = function(){
+            console.log(this,"Error found");
+        }
+    </script>
+</body>
+</html>

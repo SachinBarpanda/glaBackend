@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // setTimeout(function(){
+        //     console.log("Image Uploaded");
+        //     setTimeout(function(){
+        //         console.log("Captions added");
+        //         setTimeout(function(){
+        //             console.log("Filter added");
+        //             setTimeout(function(){
+        //                 console.log("Post is Posted");
+        //             },2000)
+        //         },2000)
+        //     },2000)
+        // },2000)
+
+        // let obj = new Promise(function(resolve, reject){
+        //     setTimeout(function(){
+        //         resolve("Image Uploaded");
+        //     },2000)
+        // })
+
+        // obj.then(function(response){
+        //     console.log(response);
+        //     return new Promise((resolve,reject)=>{
+        //         setTimeout(function(){
+        //             resolve("caption added")
+        //         },2000)
+        //     })
+        // }).then((response)=>{
+        //     console.log(response);
+        // })
+
+        async function rohit(){
+            await new Promise((resolve,reject)=>{
+                setTimeout(function(){
+                    // resolve("Image Uploaded");
+                    console.log("Image Uploaded");
+                    resolve();
+                },2000)
+            })
+
+            await new Promise((resolve,reject)=>{
+                setTimeout(function(){
+                    // resolve("Caption Added");
+                    console.log("Caption Added");
+                },2000)
+            })
+        }
+        rohit();
+
+    </script>
+</body>
+</html>

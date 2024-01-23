@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CallBack hell tutorial</h1>
+
+    <script>
+        // setTimeout(()=>{
+        //     console.log("Image uploaded to edit");
+        //     setTimeout(()=>{
+        //         console.log("Captions are added");
+        //         setTimeout(()=>{
+        //             console.log("Location are added");
+        //             setTimeout(()=>{
+        //                 console.log("Post is posted");
+        //             },2000)
+        //         },2000)
+        //     },2000)
+        // },2000)
+
+        let ourPromise = new Promise(function(resolve , reject){
+            setTimeout(()=>{
+                resolve("Image uploaded to edit");
+                
+            },2000)
+        })
+
+        ourPromise.then(
+            function(val){
+                console.log(val);
+                return new Promise(function(resolve , reject){
+                setTimeout(()=>{
+                    resolve("Captions are added");
+                },2000)
+            })      
+            }
+        )
+        .then(function(val){
+            console.log(val);
+        })
+
+        // setTimeout(()=>{
+        //     console.log("Image uploaded to edit");
+        //     setTimeout(()=>{
+        //         console.log("Captions are added");
+        //         setTimeout(()=>{
+        //             console.log("Location are added");
+        //             setTimeout(()=>{
+        //                 console.log("Post is posted");
+        //             },2000)
+        //         },2000)
+        //     },2000)
+        // },2000)
+
+        
+
+    </script>
+</body>
+</html>

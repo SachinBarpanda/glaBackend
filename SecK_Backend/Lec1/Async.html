@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Asynchronous JS</h1>
+
+    <script>
+        // setTimeout(function(){
+        //     console.log("Photo Uploaded");
+        //     setTimeout(()=>{
+        //         console.log("Captions written");
+        //         setTimeout(()=>{
+        //             console.log("Location Added");
+        //             setTimeout(()=>{
+        //                 console.log("Post Uploaded");
+        //             },2000)
+        //         },2000)
+        //     },2000)
+        // },2000)
+
+            // let ourPromise = new Promise(function(resolve,reject){
+            //     setTimeout(function(){
+            //         resolve("Photo Uploaded");
+            //         reject("Error occured");
+            //     },2000);
+            // })
+
+            // ourPromise.then(function(item){
+            //     console.log(item);
+            //         return new Promise(function(resolve,reject){
+            //         setTimeout(function(){
+            //             resolve("Caption added");
+            //             reject("Error occured");
+            //         },2000);
+            //     })
+            // }).then(function(item){
+            //     console.log(item);
+            // })
+
+            // ourPromise.catch(function(item){
+            //     console.log(item);
+            // })
+
+            async function myFun(){
+                await new Promise(function(resolve,reject){
+                    setTimeout(function(){
+                        console.log("Photo Uploaded");
+                        resolve();
+                    },2000);
+                });
+                await new Promise(function(resolve,reject){
+                    setTimeout(function(){
+                        console.log("Caption Added");
+                    },2000);
+                })
+            }
+
+            myFun();
+
+</script>
+</body>
+</html>

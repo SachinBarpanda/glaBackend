@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Axios</h1>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+
+        // let ref = new XMLHttpRequest("https://isro.vercel.app/api/spacecrafts");
+        // ref.open('GET',"https://isro.vercel.app/api/spacecrafts");
+        // ref.send();
+        // ref.onload = function (){
+        //     console.log(JSON.parse(this.response).spacecrafts[0].name),onload
+        // }
+
+        // fetch("https://isro.vercel.app/api/spacecrafts")
+        // .then(function(res){
+        //     // console.log(res.json());
+        //     return res.json();
+        // }).then(function(res){
+        //     console.log(res);
+        // })
+        
+        let myAxios = axios.get("https://isro.vercel.app/api/spacecrafts");
+        myAxios.then(function(res){
+            console.log(res.data.spacecrafts[0]);
+        })
+
+
+    </script>
+</body>
+</html>

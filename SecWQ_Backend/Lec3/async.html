@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // setTimeout(function(){
+        //     console.log("App is opened");
+        //     setTimeout(function(){
+        //         console.log("Photo is uploaded");
+        //         setTimeout(function(){
+        //             console.log("Filters are applied");
+        //             setTimeout(function(){
+        //                 console.log("Post is uploaded");
+        //             },2000)
+        //         },2000)
+        //     },2000)
+        // },2000)
+
+            // const res = new Promise(function(resolve,reject){
+            //     setTimeout(function(){
+            //         resolve("App is opened");
+            //         reject("Promise not met")
+            //     },2000)
+            // })
+
+            // res
+            // .then(function(val){
+            //     console.log(val);
+            //         return new Promise(function(resolve,reject){
+            //             setTimeout(function(){
+            //             resolve("Photo is uploaded");
+            //             reject("Promise not met")
+            //         },2000)
+            //     })
+            // })
+            // .then(function(val){
+            //     console.log(val);
+            // })
+            // .catch()
+
+
+                async function asyncFun(){
+
+                    await new Promise(function(resolve,reject){
+                        setTimeout(function(){
+                            console.log("App opened");
+                            resolve();
+                        },2000)
+                    
+                    })
+                    
+                    await new Promise(function(resolve,reject){
+                        setTimeout(function(){
+                            console.log("Photo uploaded");
+                            resolve();
+                        },2000)
+                    
+                    })
+
+                    
+                }
+
+                asyncFun();
+
+    </script>
+</body>
+</html>
