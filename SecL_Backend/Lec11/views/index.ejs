@@ -1,0 +1,15 @@
+<%- include("partials/header.ejs") %>
+    <h1>EJS working</h1>
+
+    <div>Math.random() <%= num = Math.floor(Math.random()*10) %></div>
+
+    <% if(num%2==0){ %>
+        <h1>Even</h1>    
+    <% }else{%>
+        <h1>Odd</h1>
+    <% }%>
+
+    <h1><%= pi %></h1>
+
+</body>
+</html>
