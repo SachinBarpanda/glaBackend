@@ -1,0 +1,31 @@
+<%- include("partials/header.ejs") %>
+<fieldset>
+    <legend>
+        GET
+    </legend>
+        <form action="/newGet" method="GET">
+            Name :
+            <input value="" type="text" name="name" id="">
+            <br><br>
+            Age : 
+            <input value="" type="text" name="age" id="">
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </fieldset>    
+<fieldset>
+    <legend>
+        POST
+    </legend>
+        <form action="/posterMan" method="POST">
+            Name :
+            <input value="" type="text" name="name" id="">
+            <br><br>
+            Age : 
+            <input value="" type="text" name="age" id="">
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </fieldset>    
+</body>
+</html>

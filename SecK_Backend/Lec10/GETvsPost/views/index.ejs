@@ -1,0 +1,15 @@
+<%- include("./partial/header") %>
+
+<form action="/getKaPath" method="GET">
+    Name :
+    <input value="" type="text" name="name" id="">
+    <hr><hr>
+    Age: 
+    <input value="" type="text" name="age" id="">
+    <hr><hr>
+    <button type="submit">Submit</button>
+
+    <%= req.params.name %>
+</form>
+
+<%- include("./partial/footer") %>

@@ -1,0 +1,21 @@
+<%- include('./partials/header.ejs') %>
+
+    <h2>Math.random() <%= num = Math.floor(Math.random()*5) %> </h2>
+    <h2>Arr <%= arr = ['one','two','three','four','five'] %> </h2>
+
+
+    <% if(num%2==0){ %>
+        <h1>Even</h1>
+    <% }else{%>
+        <h1>Odd</h1>
+    <% }%>
+
+    <%for(let i = 0 ; i < 5 ;i++){ %>
+        <h4> i = <%= i %></h4>
+    <%} %>
+
+
+
+
+</body>
+</html>
