@@ -87,14 +87,14 @@ app.get('/articles/:id/edit',(req,res)=>{
 app.patch('/articles/:id',(req,res)=>{
     let {id} = req.params;
     // console.log(id);
-    const foundComment = articles.find(function(item){
+    const prevData = articles.find(function(item){
         if(item.id === Number(id)){
             return item;
         }
     })
     // console.log(req.body,foundComment);
-    foundComment.username = req.body.Name;
-    foundComment.comment = req.body.article;
+    prevData.username = req.body.Name;
+    prevData.comment = req.body.article;
     res.redirect('/articles');
 })
 

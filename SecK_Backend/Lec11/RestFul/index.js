@@ -87,14 +87,14 @@ app.get('/articles/:id/edit',(req,res)=>{
 app.patch('/articles/:id',(req,res)=>{
     let {id} = req.params;
     // console.log(id);
-    const foundComment = articles.find(function(item){
+    const editArray= articles.find(function(item){
         if(item.id === Number(id)){
             return item;
         }
     })
     // console.log(req.body,foundComment);
-    foundComment.username = req.body.Name;
-    foundComment.comment = req.body.article;
+    editArray.username = req.body.Name;
+    editArray.comment = req.body.article;
     res.redirect('/articles');
 })
 
@@ -105,7 +105,6 @@ app.delete('/articles/:id',(req,res)=>{
     })
     res.redirect('/articles')
 })
-
 
 app.listen(8080,()=>{
     console.log("Running...");

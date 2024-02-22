@@ -13,11 +13,13 @@
     <form class="w-50 m-auto" action="/articles/<%=foundComment.id%>?_method=PATCH" method="POST">
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Username</label>
-            <input type="text" name="Name" class="form-control" value="<%= foundComment.username %>" id="exampleFormControlInput1" placeholder="name">
+            <input type="text" name="Name" class="form-control" 
+            value="<%= foundComment.username %>" id="exampleFormControlInput1" placeholder="name">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Your article</label>
-            <input type="text" name="article" class="form-control" value="<%= foundComment.comment %>"id="exampleFormControlTextarea1" rows="3"></input>
+            <input type="text" name="article" class="form-control" 
+            value="<%= foundComment.comment %>"id="exampleFormControlTextarea1" rows="3"></input>
           </div>
           <div class="col-auto">
             <button type="submit" class="btn btn-primary mb-3">Confirm</button>
